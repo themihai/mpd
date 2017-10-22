@@ -71,6 +71,7 @@ type MPD struct {
 	TimeShiftBufferDepth       *string `xml:"timeShiftBufferDepth,attr"`
 	PublishTime                *string `xml:"publishTime,attr"`
 	Profiles                   string  `xml:"profiles,attr"`
+	BaseURL                    string
 	Period                     *Period `xml:"Period,omitempty"`
 }
 
