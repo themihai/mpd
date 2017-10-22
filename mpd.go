@@ -71,7 +71,7 @@ type MPD struct {
 	TimeShiftBufferDepth       *string `xml:"timeShiftBufferDepth,attr"`
 	PublishTime                *string `xml:"publishTime,attr"`
 	Profiles                   string  `xml:"profiles,attr"`
-	BaseURL                    string
+	BaseURL                    string  `xml:"BaseURL,omitempty"`
 	Period                     *Period `xml:"Period,omitempty"`
 }
 
@@ -124,7 +124,6 @@ type Period struct {
 
 // AdaptationSet represents XSD's AdaptationSetType.
 type AdaptationSet struct {
-	MimeType                string           `xml:"mimeType,attr"`
 	SegmentAlignment        ConditionalUint  `xml:"segmentAlignment,attr"`
 	SubsegmentAlignment     ConditionalUint  `xml:"subsegmentAlignment,attr"`
 	StartWithSAP            *uint64          `xml:"startWithSAP,attr"`
@@ -141,6 +140,7 @@ type Representation struct {
 	Width              *uint64          `xml:"width,attr"`
 	Height             *uint64          `xml:"height,attr"`
 	FrameRate          *string          `xml:"frameRate,attr"`
+	MimeType           string           `xml:"mimeType,attr"`
 	Bandwidth          *uint64          `xml:"bandwidth,attr"`
 	AudioSamplingRate  *string          `xml:"audioSamplingRate,attr"`
 	Codecs             *string          `xml:"codecs,attr"`
