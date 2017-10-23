@@ -130,6 +130,7 @@ type AdaptationSet struct {
 	SubsegmentStartsWithSAP *uint64          `xml:"subsegmentStartsWithSAP,attr"`
 	BitstreamSwitching      *bool            `xml:"bitstreamSwitching,attr"`
 	Lang                    *string          `xml:"lang,attr"`
+	ContentType             *string          `xml:"contentType,attr"`
 	ContentProtections      []Descriptor     `xml:"ContentProtection,omitempty"`
 	Representations         []Representation `xml:"Representation,omitempty"`
 }
